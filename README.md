@@ -11,12 +11,12 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 _Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
-VISUAL STUDIO CODE - ANACONDA - PYTHON -
+VISUAL STUDIO CODE - PYTHON
+vscode: https://code.visualstudio.com/Download
+python: https://www.python.org/downloads/
 ```
 
 ### Instalación 🔧
-
-## \_\_
 
 ### Temario 📖
 
