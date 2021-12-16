@@ -13,3 +13,18 @@ print(hoy, type(hoy))  # FECHA CON HORA
 
 hoy = dt_date.today()
 print(hoy, type(hoy))  # FECHA SIN HORA
+
+hoy = dt_dt.today().ctime()
+print(hoy, type(hoy))  # FECHA CON HORA Y FORMATO DE TEXTO
+
+#CONVERTIR UN STRING EN UN OBJETO DATETIME
+hoy = dt_dt.today()
+expiracion_str = '2022-03-01'
+expiracion = dt_dt.strptime(expiracion_str, '%Y-%m-%d')
+expiracion - hoy
+
+# vencimiento = expiracion - hoy
+
+# dt_dt.ctime(vencimiento)
+
+# print('VENCIMIENTO: ', vencimiento)

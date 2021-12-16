@@ -4,7 +4,7 @@ import random
 
 min = 10000
 max = 11000
-paso = 1  # LA VARIABLE PASO DEBE SER INTEGER, POR LO TANTO DESPUES DIVIDO POR 100
+paso = 1  # LA VARIABLE PASO DEBE SER INTEGER, POR LO TANTO MULTIPLICO 100 Y 11O POR 1000 Y DESPUES DIVIDO POR 100
 ggal = random.randrange(min, max, paso)/100
 print(ggal)
 
