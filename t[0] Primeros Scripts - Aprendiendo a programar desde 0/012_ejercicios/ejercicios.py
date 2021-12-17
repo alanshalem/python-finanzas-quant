@@ -34,3 +34,9 @@ print(dias_faltantes.days)
 #--------------------#
 # Rta Ejercicio 4:
 #--------------------#
+dia = 18
+mes = 12
+año = dt_dt.now().year
+fecha_fin_año = dt_dt(año, mes, dia)
+dias_faltantes = fecha_fin_año - hoy
+print(dias_faltantes.days/365)
