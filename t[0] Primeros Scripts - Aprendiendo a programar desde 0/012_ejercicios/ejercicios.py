@@ -31,3 +31,6 @@ dias_faltantes = fecha_fin_año - hoy
 print(dias_faltantes.days)
 
 #4- Hacer un script que le informe al usuario que fraccion de año queda para la expiracion de una opcion que vence el 18 de diciembre del corriente año (que funcione sea cual sea el año que se ejecute el codigo)
+#--------------------#
+# Rta Ejercicio 4:
+#--------------------#
