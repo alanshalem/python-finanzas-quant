@@ -86,29 +86,6 @@ random.shuffle(listado_6)
 print(listado_6)
 
 ########################################################################################################################
-#TUPLAS
-########################################################################################################################
-# Las tuplas son una estructura similar a las listas, pero son inmutables, es decir, una vez que las definimos, ya no les podemos cambiar valores.
-# Son un conjunto de datos y se lo define entre parentesis con sus elementos separados con coma.
-#Ejemplo:
-#tupla = (1,2,3,4,5)
-
-listado_tupla = ('GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES')
-print(type(listado_tupla)) # <class 'tuple'>
-print(listado_tupla[1]) # PAMP
-
-#Vamos a provocar el error de querer asignar un nuevo valor a un elemento de una tupla.
-#listado_tupla_1[1] = 'COME' # TypeError: 'tuple' object does not support item assignment
-
-# ¿Que pasa si tengo una tupla y le quiero cambiar un valor? Uso los metodos para pasar de tupla a lista list() y viceversa tuple()
-listado_tupla_2 = ('GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES')
-print(type(listado_tupla_2)) # <class 'tuple'>
-listado = list(listado_tupla_2)
-print(type(listado)) # <class 'list'>
-listado = tuple(listado)
-print(type(listado)) # <class 'tuple'>
-
-########################################################################################################################
 #Metodos de tuplas y listas
 ########################################################################################################################
 
@@ -174,54 +151,3 @@ print(listado) # ['CRES', 'LOMA', 'EDN', 'CEPU', 'YPFD', 'PAMP', 'GGAL']
 listado = ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
 listado.clear()
 print(listado) # []
-
-########################################################################################################################
-# Diccionarios
-########################################################################################################################
-# Un diccionario es una coleccion de datos que se almacenan en forma de clave-valor
-# EjempLo:
-diccionario = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-diccionario_acciones = {'ALUA': 29.35, 'BBAR': 120.85, 'BMA': 265.2, 'BYMA': 295}
-type(diccionario) # <class 'dict'>
-type(diccionario_acciones) # <class 'dict'>
-
-print(diccionario['nombre']) # Juan
-print(diccionario['apellido']) # Perez
-print(diccionario_acciones['ALUA']) # 29.35 
-# print(diccionario_acciones['BITCOIN']) # Si no existe la clave, devuelve un error
-print(diccionario_acciones.get('ALUA')) # 29.35
-print(diccionario_acciones.get('BITCOIN')) # Si no existe la clave, devuelve None (no existe)
-print(diccionario_acciones.get('BITCOIN', 'No existe la clave')) # Si no existe la clave, devuelve el valor que se le pasa como segundo parametro
-
-#Acceder por separado a las Claves y los Valores
-print(diccionario.keys()) # dict_keys(['nombre', 'apellido', 'edad']) - Devuelve una lista con las claves
-print(diccionario.values()) # dict_values(['Juan', 'Perez', 23]) - Devuelve una lista con los valores
-
-# Si queremos tener los valores como una lista, podemos hacerlo de la siguiente manera:
-print(list(diccionario.values())) # ['Juan', 'Perez', 23]
-
-# Accedemos a los pares clave-valor
-print(diccionario.items()) # dict_items([('nombre', 'Juan'), ('apellido', 'Perez'), ('edad', 23)]) - Devuelve una lista con los pares clave-valor
-
-# Pop - Elimina un elemento del diccionario y devuelve el valor eliminado
-print(diccionario.pop('edad')) # 23
-print(diccionario) # {'nombre': 'Juan', 'apellido': 'Perez'}
-
-# Update - Actualiza los valores de un diccionario
-diccionario = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-diccionario.update({'nombre': 'Pedro', 'edad': 24})
-print(diccionario) # {'nombre': 'Pedro', 'apellido': 'Perez', 'edad': 24}
-# otra forma
-diccionario = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-diccionario.update(nombre='Pedro', edad=24)
-print(diccionario) # {'nombre': 'Pedro', 'apellido': 'Perez', 'edad': 24}
-# otra forma
-diccionario_1 = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-diccionario_2 = {'nombre': 'Pedro', 'edad': 24}
-diccionario_1.update(diccionario_2)
-print(diccionario_1) # {'nombre': 'Pedro', 'apellido': 'Perez', 'edad': 24}
-
-# Insertar nuevo elemento en un diccionario
-dic1 = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-dic1['ciudad'] = 'Cordoba'
-print(dic1) # {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23, 'ciudad': 'Cordoba'}
