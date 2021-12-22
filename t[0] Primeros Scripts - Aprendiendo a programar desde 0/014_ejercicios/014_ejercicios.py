@@ -28,13 +28,18 @@ print(sum(listado) / len(listado))
 # lideres = ['GGAL', 'PAMP', 'YPFD', 'TECO2', 'EDN', 'LOMA', 'BBAR']
 # galpones = ['AGRO', 'FIPL', 'MIRG', 'GARO', 'LONG']
 # 7 - Elegir un galpon al azar y agregarlo a la lista de lideres al final
+# 8 - Elegir un galpon al azar y reemplazar a EDN por ese galpon
+# 9 - Elegir 3 galpones al azar y reemplazar una lider cualquiera por esos dos galpones
+
+# 7 - Elegir un galpon al azar y agregarlo a la lista de lideres al final
 lideres = ["GGAL", "PAMP", "YPFD", "TECO2", "EDN", "LOMA", "BBAR"]
 galpones = ["AGRO", "FIPL", "MIRG", "GARO", "LONG"]
-
 lideres.append(galpones.pop(random.randint(0, len(galpones) - 1)))
 print(lideres)
 
 # 8 - Elegir un galpon al azar y reemplazar a EDN por ese galpon
+lideres = ["GGAL", "PAMP", "YPFD", "TECO2", "EDN", "LOMA", "BBAR"]
+galpones = ["AGRO", "FIPL", "MIRG", "GARO", "LONG"]
 galpones.pop(random.randint(0, len(galpones) - 1))  # Selecciono un galpon al azar
 lideres[lideres.index("EDN")] = galpones.pop(
     random.randint(0, len(galpones) - 1)
@@ -42,6 +47,8 @@ lideres[lideres.index("EDN")] = galpones.pop(
 
 # 9 - Elegir 3 galpones al azar y reemplazar una lider cualquiera por esos dos galpones
 # Elegir 3 galpones al azar
+lideres = ["GGAL", "PAMP", "YPFD", "TECO2", "EDN", "LOMA", "BBAR"]
+galpones = ["AGRO", "FIPL", "MIRG", "GARO", "LONG"]
 galpones_elegidos = random.sample(galpones, 3)
 indice = random.randint(0, len(lideres) - 1)
 lideres[indice] = galpones_elegidos.pop(random.randint(0, len(galpones_elegidos) - 1))
@@ -66,12 +73,68 @@ panel = {
 }
 
 # 10 - Reemplazar el precio de BBAR por un precio al azar que elija python que varie +/- $1 del precio que tiene (con precision de 0.01)
+panel = {
+    "ALUA": 29.3,
+    "BBAR": 120.5,
+    "BMA": 265.2,
+    "BYMA": 290,
+    "CEPU": 29,
+    "COME": 3,
+    "CRES": 40.7,
+}
 panel["BBAR"] = round(panel["BBAR"] + random.uniform(-1, 1), 2)
+print(panel)
 
-# 11 - Reemplazar el precio de BBAR por un precio al azar que elija python que varie +/- 3% del precio que tiene (con precision de 0.01)
+# 11 - Reemplazard el precio de BBAR por un precio al azar que elija python que varie +/- 3% del precio que tiene (con precision de 0.01)
+panel = {
+    "ALUA": 29.3,
+    "BBAR": 120.5,
+    "BMA": 265.2,
+    "BYMA": 290,
+    "CEPU": 29,
+    "COME": 3,
+    "CRES": 40.7,
+}
+panel["BBAR"] = round(panel["BBAR"] * (1 + random.uniform(-0.03, 0.03)), 2)
 
 # 12 - Elegir un ticker al azar y mostrarlo
+panel = {
+    "ALUA": 29.3,
+    "BBAR": 120.5,
+    "BMA": 265.2,
+    "BYMA": 290,
+    "CEPU": 29,
+    "COME": 3,
+    "CRES": 40.7,
+}
+print(random.choice(list(panel.keys())))
 
 # 13 - Re-ordenar el diccionario al azar
+panel = {
+    "ALUA": 29.3,
+    "BBAR": 120.5,
+    "BMA": 265.2,
+    "BYMA": 290,
+    "CEPU": 29,
+    "COME": 3,
+    "CRES": 40.7,
+}
+print(random.sample(list(panel.keys()), len(panel.keys())))
 
 # 14 - Re-ordenar el diccionario alfabeticamente en forma inversa (de la Z a la A)
+# Reorder dictionary and reverse it
+panel = {
+    "ALUA": 29.3,
+    "BBAR": 120.5,
+    "BMA": 265.2,
+    "BYMA": 290,
+    "CEPU": 29,
+    "COME": 3,
+    "CRES": 40.7,
+}
+
+keys = list(panel.keys())
+random.shuffle(keys)
+panel_reordenado = [(key, panel[key]) for key in keys]
+dict(panel_reordenado)
+print(panel_reordenado)
