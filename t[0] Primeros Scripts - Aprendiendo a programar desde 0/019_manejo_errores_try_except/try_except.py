@@ -13,6 +13,9 @@
 # y ahi es util usar este metodo.
 
 # 1° Ejemplo
+from typing import final
+
+
 volumen = 1200
 dias = 0
 
@@ -52,3 +55,15 @@ print(volMedio)  # 1200/2 = 600
 # ¿Para que sirve el bloque finally, si podria haber puesto esas lineas al mismo nivel que el except al terminar ese bloque?
 # Es una cuestion mas bien de prolijidad, es exactamente lo mismo poner un bloque de instrucciones en el finally o ponerlo despues del bloque
 # except sin mas, pero queda mas prolijo y entendible cuando todo el bloque Try/Except/Finally tiene una logica asociada.
+
+# Mismo ejemplo con dias = 0
+volumen = 1200
+dias = 0
+
+try:
+    volMedio = volumen / dias
+except:
+    volMedio = None
+finally:
+    print("Por aca pasa siempre")
+print(volMedio)  # None -> ya que dias = 0, no se puede dividir por cero
