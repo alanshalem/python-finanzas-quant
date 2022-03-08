@@ -7,6 +7,10 @@
 # smaFast = 100
 # smaSlow = 98
 # buyPrice = 106
+price = 97
+buyPrice = 106
+smaFast = 100
+smaSlow = 98
 
 # 1- Armar un script que me defina en una sola condicion la variable hold para un activo es verdadera o falsa, en funcion de las siguientes premisas:
 # Que este en tendencia bull, asumiendo para ello que la media rapida sea un 2% mayor a una media lenta
@@ -19,6 +23,19 @@
 # -price=121 => True
 # -price=128 => False
 
+# -------------------------------------------------- #
+# RESPUESTA 1 #
+# -------------------------------------------------- #
+
+hold = False
+tendenciaBull = smaFast > smaSlow * 1.02
+stopLoss = price < buyPrice * 0.95
+takeProfit = price > buyPrice * 1.2
+
+if tendenciaBull and stopLoss and takeProfit:
+    hold = True
+
+
 # 2- Con las mismas premisas del ejercicio anterior, modificarlo para que me devuelva en una
 # variable state un string que me indique si sigo invertido en ese activo, pero ademas en caso de ser
 # falso me indique si se salio por stopLoss o por toma de ganancias
@@ -28,7 +45,17 @@
 # -price=101 => Invertidos
 # -price=121 => Invertidos
 # -price=128 => Salida por takeProfit
+state = ""
+if tendenciaBull and not stopLoss and not takeProfit:
+    state = "Seguimos Invertidos"
+else:
+    if stopLoss:
+        state = "Salida por stopLoss"
+    else:
+        state = "Salida por takeProfit"
+print(state)
 
 # 3- Reforzar la logica del ejercicio anterior agregando a la condicion del stopLoss que el
 # precio tiene que cortar a la media movil lento para abajo para disparar el stopLoss. Verificar que
 # nos devuelve lo siguiente para los siguientes precios.
+stopLoss = (price < smaSlow) and (price < buyPrice * 0.95)
