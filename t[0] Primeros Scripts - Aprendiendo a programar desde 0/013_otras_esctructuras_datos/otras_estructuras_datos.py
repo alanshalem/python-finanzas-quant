@@ -4,13 +4,14 @@
 # Listas: Las listas son un conjunto de datos y se lo define entre corchetes con sus elementos separados con coma.
 # En otros lenguajes se los conocen como arreglos o arrays.
 # Ejemplo:
-#lista = [1,2,3,4,5]
+# lista = [1,2,3,4,5]
 
 # 1° forma de crear una lista
 import random
+
 lista_vacia = list()
 print(lista_vacia)
-#lista_vacia = []
+# lista_vacia = []
 
 # 2° forma de crear una lista
 lista_vacia = []
@@ -24,7 +25,7 @@ lista_numeros_2 = list([1, 2, 3, 4])
 print(lista_numeros_2)
 
 # Lista con tipo de datos diferentes
-listado = ['CERO', 1, 2, 'tres', 4.0, True]
+listado = ["CERO", 1, 2, "tres", 4.0, True]
 print(listado)
 
 print(type(listado))  # <class 'list'>
@@ -63,21 +64,21 @@ listado_3 = ["CERO", 1, 2, "tres", 4.0, True]
 # print(listado_3[23]) # IndexError: list index out of range
 
 # Cambiar valor de un elemento de la lista
-listado_4 = ['GGAL', 'PAMP', 'YPFD', 'EDN', 'LOMA', 'CRES']
-listado_4[1] = 'COME'
+listado_4 = ["GGAL", "PAMP", "YPFD", "EDN", "LOMA", "CRES"]
+listado_4[1] = "COME"
 print(listado_4)
 
 # Cambiar varios valores de la lista por un solo valor
-listado_5 = ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
-listado_5[1:3] = ['COME']
+listado_5 = ["GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES"]
+listado_5[1:3] = ["COME"]
 print(listado_5)
 
 # Cambiar varios elementos de la lista por varios valores
-listado_5[1:3] = ['COME', 'COME']
+listado_5[1:3] = ["COME", "COME"]
 print(listado_5)
 
 # Eligiendo valores al azar de una lista
-listado_6 = ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
+listado_6 = ["GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES"]
 # Elegir un elemento al azar de la lista
 print(random.choice(listado_6))
 # Elegir n elementos al azar de la lista
@@ -93,9 +94,9 @@ print(listado_6)
 # Las tuplas son una estructura similar a las listas, pero son inmutables, es decir, una vez que las definimos, ya no les podemos cambiar valores.
 # Son un conjunto de datos y se lo define entre parentesis con sus elementos separados con coma.
 # Ejemplo:
-#tupla = (1,2,3,4,5)
+# tupla = (1,2,3,4,5)
 
-listado_tupla = ('GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES')
+listado_tupla = ("GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES")
 print(type(listado_tupla))  # <class 'tuple'>
 print(listado_tupla[1])  # PAMP
 
@@ -103,7 +104,7 @@ print(listado_tupla[1])  # PAMP
 # listado_tupla_1[1] = 'COME' # TypeError: 'tuple' object does not support item assignment
 
 # ¿Que pasa si tengo una tupla y le quiero cambiar un valor? Uso los metodos para pasar de tupla a lista list() y viceversa tuple()
-listado_tupla_2 = ('GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES')
+listado_tupla_2 = ("GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES")
 print(type(listado_tupla_2))  # <class 'tuple'>
 listado = list(listado_tupla_2)
 print(type(listado))  # <class 'list'>
@@ -147,38 +148,38 @@ cantidadesLista.sort(reverse=True)
 print(cantidadesLista)  # [10, 8, 7, 6, 6, 5, 5, 4, 4, 3, 2, 2]
 
 # Append: Agrega un elemento al final de la lista
-listado = ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
+listado = ["GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES"]
 print(listado)  # ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
-listado.append('ALUA')
+listado.append("ALUA")
 # ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES', 'ALUA']
 print(listado)
 
 # Extend: Agrega varios elementos al final de la lista
-listado = ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
-listadoPanelGral = ['BHIP', 'CELU', 'CTIO']
+listado = ["GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES"]
+listadoPanelGral = ["BHIP", "CELU", "CTIO"]
 listado.extend(listadoPanelGral)
 # ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES', 'BHIP', 'CELU', 'CTIO']
 print(listado)
 
 # Insert: Agrega un elemento en una posicion especifica de la lista
-listado = ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
-listado.insert(3, 'TXAR')
+listado = ["GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES"]
+listado.insert(3, "TXAR")
 # ['GGAL', 'PAMP', 'YPFD', 'TXAR', 'CEPU', 'EDN', 'LOMA', 'CRES']
 print(listado)
 
 # Pop: Elimina un elemento de la lista y devuelve el valor eliminado
-listado = ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
+listado = ["GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES"]
 eliminado = listado.pop(2)  # YPFD
-print('El elemento eliminado es: ' + eliminado)  # YPFD
+print("El elemento eliminado es: " + eliminado)  # YPFD
 print(listado)  # ['GGAL', 'PAMP', 'CEPU', 'EDN', 'LOMA', 'CRES']
 
 # Reverse: Invierte los elementos de una lista
-listado = ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
+listado = ["GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES"]
 listado.reverse()
 print(listado)  # ['CRES', 'LOMA', 'EDN', 'CEPU', 'YPFD', 'PAMP', 'GGAL']
 
 # Clear: Elimina todos los elementos de una lista
-listado = ['GGAL', 'PAMP', 'YPFD', 'CEPU', 'EDN', 'LOMA', 'CRES']
+listado = ["GGAL", "PAMP", "YPFD", "CEPU", "EDN", "LOMA", "CRES"]
 listado.clear()
 print(listado)  # []
 
@@ -187,21 +188,20 @@ print(listado)  # []
 ########################################################################################################################
 # Un diccionario es una coleccion de datos que se almacenan en forma de clave-valor
 # EjempLo:
-diccionario = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-diccionario_acciones = {'ALUA': 29.35,
-                        'BBAR': 120.85, 'BMA': 265.2, 'BYMA': 295}
+diccionario = {"nombre": "Juan", "apellido": "Perez", "edad": 23}
+diccionario_acciones = {"ALUA": 29.35, "BBAR": 120.85, "BMA": 265.2, "BYMA": 295}
 type(diccionario)  # <class 'dict'>
 type(diccionario_acciones)  # <class 'dict'>
 
-print(diccionario['nombre'])  # Juan
-print(diccionario['apellido'])  # Perez
-print(diccionario_acciones['ALUA'])  # 29.35
+print(diccionario["nombre"])  # Juan
+print(diccionario["apellido"])  # Perez
+print(diccionario_acciones["ALUA"])  # 29.35
 # print(diccionario_acciones['BITCOIN']) # Si no existe la clave, devuelve un error
-print(diccionario_acciones.get('ALUA'))  # 29.35
+print(diccionario_acciones.get("ALUA"))  # 29.35
 # Si no existe la clave, devuelve None (no existe)
-print(diccionario_acciones.get('BITCOIN'))
+print(diccionario_acciones.get("BITCOIN"))
 # Si no existe la clave, devuelve el valor que se le pasa como segundo parametro
-print(diccionario_acciones.get('BITCOIN', 'No existe la clave'))
+print(diccionario_acciones.get("BITCOIN", "No existe la clave"))
 
 # Acceder por separado a las Claves y los Valores
 # dict_keys(['nombre', 'apellido', 'edad']) - Devuelve una lista con las claves
@@ -217,26 +217,26 @@ print(list(diccionario.values()))  # ['Juan', 'Perez', 23]
 print(diccionario.items())
 
 # Pop - Elimina un elemento del diccionario y devuelve el valor eliminado
-print(diccionario.pop('edad'))  # 23
+print(diccionario.pop("edad"))  # 23
 print(diccionario)  # {'nombre': 'Juan', 'apellido': 'Perez'}
 
 # Update - Actualiza los valores de un diccionario
-diccionario = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-diccionario.update({'nombre': 'Pedro', 'edad': 24})
+diccionario = {"nombre": "Juan", "apellido": "Perez", "edad": 23}
+diccionario.update({"nombre": "Pedro", "edad": 24})
 print(diccionario)  # {'nombre': 'Pedro', 'apellido': 'Perez', 'edad': 24}
 # otra forma
-diccionario = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-diccionario.update(nombre='Pedro', edad=24)
+diccionario = {"nombre": "Juan", "apellido": "Perez", "edad": 23}
+diccionario.update(nombre="Pedro", edad=24)
 print(diccionario)  # {'nombre': 'Pedro', 'apellido': 'Perez', 'edad': 24}
 # otra forma
-diccionario_1 = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-diccionario_2 = {'nombre': 'Pedro', 'edad': 24}
+diccionario_1 = {"nombre": "Juan", "apellido": "Perez", "edad": 23}
+diccionario_2 = {"nombre": "Pedro", "edad": 24}
 diccionario_1.update(diccionario_2)
 print(diccionario_1)  # {'nombre': 'Pedro', 'apellido': 'Perez', 'edad': 24}
 
 # Insertar nuevo elemento en un diccionario
-dic1 = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23}
-dic1['ciudad'] = 'Cordoba'
+dic1 = {"nombre": "Juan", "apellido": "Perez", "edad": 23}
+dic1["ciudad"] = "Cordoba"
 # {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 23, 'ciudad': 'Cordoba'}
 print(dic1)
 
@@ -244,13 +244,13 @@ print(dic1)
 # Si quisieramos agregar elementos a listas o diccionarios que no existan, vamos a tener problemas.
 # dicNuevo['ciudad'] = 'Cordoba'  # Error porque no existe la clave 'ciudad' en el diccionario dicNuevo
 dicNuevo = {}
-dicNuevo['GGAL'] = 29.35
+dicNuevo["GGAL"] = 29.35
 print(dicNuevo)  # {'GGAL': 29.35}
 
 listaNueva = []
-listaNueva.append('GGAL')
+listaNueva.append("GGAL")
 print(listaNueva)  # ['GGAL']
 
-#Asignacion multiple
+# Asignacion multiple
 lista1 = lista2 = lista3 = []
 print(lista1, lista2, lista3)  # [] [] []
